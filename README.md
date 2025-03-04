@@ -29,11 +29,11 @@ Gelişmiş bir Discord Ticket Botu! Kullanıcılar belirli kategorilerde destek 
 - **Ticket Kapatma:** Destek talebi tamamlandığında ticket kapatılabilir.
 - **Ticket Loglama:** Destek talebi tamamlanıp kapatıldığında detaylı bir transcript alır ve log kanalına gönderir.
 
-## Resimler
-<a href="https://hizliresim.com/1vla4me"><img src="https://i.hizliresim.com/1vla4me.jpg" alt="Resim Yükle"></a>
-
 ## İletişim
 Herhangi bir sorunuz veya öneriniz varsa benimle iletişime geçebilirsiniz.
+
+[Discord](https://discord.com/users/860495707177222155)
+
 
 ## Lisans
 Bu proje açık kaynak olup MIT lisansı ile lisanslanmıştır.
