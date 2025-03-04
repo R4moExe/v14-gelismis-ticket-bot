@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       name: "ticket-kanal",
-      description: "Ticket açma mesajının gönderileceği kanal ID'sini girin.",
+      description: "Ticket panel mesajının gönderileceği kanal ID'sini girin.",
       type: 3,
       required: true,
     }
