@@ -29,6 +29,9 @@ Gelişmiş bir Discord Ticket Botu! Kullanıcılar belirli kategorilerde destek 
 - **Ticket Kapatma:** Destek talebi tamamlandığında ticket kapatılabilir.
 - **Ticket Loglama:** Destek talebi tamamlanıp kapatıldığında detaylı bir transcript alır ve log kanalına gönderir.
 
+## Resimler
+
+
 ## İletişim
 Herhangi bir sorunuz veya öneriniz varsa benimle iletişime geçebilirsiniz.
 
