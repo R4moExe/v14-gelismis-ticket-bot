@@ -30,8 +30,7 @@ Gelişmiş bir Discord Ticket Botu! Kullanıcılar belirli kategorilerde destek 
 - **Ticket Loglama:** Destek talebi tamamlanıp kapatıldığında detaylı bir transcript alır ve log kanalına gönderir.
 
 ## Resimler
-[Ticket Panel Mesajı](https://hizliresim.com/1vla4me)
-
+<a href="https://hizliresim.com/1vla4me"><img src="https://i.hizliresim.com/1vla4me.jpg" alt="Resim Yükle"></a>
 
 ## İletişim
 Herhangi bir sorunuz veya öneriniz varsa benimle iletişime geçebilirsiniz.
