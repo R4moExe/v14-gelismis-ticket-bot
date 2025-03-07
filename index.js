@@ -87,7 +87,7 @@ async function createTicket(interaction) {
   
     const embed = new EmbedBuilder()
         .setTitle("🎫 Ticket Açıldı")
-        .setDescription(`📂 **Kategori:** ${categoryName}\n📌 **Ticket Durumu:** Beklemede\n👤 **İlgilenen Yetkili:** Henüz yok\n\nYetkililer en kısa sürede sizinle ilgilenecektir.`)
+        .setDescription(`ℹ️ Lütfen yetkililerin mesaj yazmasını beklemeden sorununuzu anlatınız.\n\n👑 **Ticket Sahibi :** ${user}\n\n📁 **Kategori :** ${categoryName}\n\n👤 **İlgilenen Yetkili :** Henüz Yok\n\n🎫 **Ticket Durumu :** Beklemede`)
         .setColor("Blue");
 
     const buttons = new ActionRowBuilder().addComponents(
@@ -102,14 +102,14 @@ async function createTicket(interaction) {
     );
 
     const ticketMessage = await channel.send({
-        content: `${user}, destek talebiniz oluşturuldu! ${guild.roles.cache.get(yetkiliRolID)} yetkilileri sizinle ilgilenecektir.`,
+        content: `${user} & ${guild.roles.cache.get(yetkiliRolID)}`,
         embeds: [embed],
         components: [buttons]
     });
 
     db.set(`ticket_${channel.id}`, { messageId: ticketMessage.id, status: "Beklemede", yetkili: null });
 
-    interaction.reply({ content: `Ticket açıldı! ${channel}`, ephemeral: true });
+    interaction.reply({ content: `Ticket oluşturuldu ${channel}`, ephemeral: true });
 }
 
 async function closeTicket(interaction) {
@@ -218,13 +218,13 @@ async function claimTicket(interaction) {
   
     const newEmbed = EmbedBuilder.from(ticketMessage.embeds[0])
         .setDescription(ticketMessage.embeds[0].description
-            .replace("📌 **Ticket Durumu:** Beklemede", "🔄 **Ticket Durumu:** İnceleniyor")
-            .replace("👤 **İlgilenen Yetkili:** Henüz yok", `👤 **İlgilenen Yetkili:** ${user}`)
+            .replace("🎫 **Ticket Durumu :** Beklemede", "🎫 **Ticket Durumu :** İnceleniyor")
+            .replace("👤 **İlgilenen Yetkili :** Henüz yok", `👤 **İlgilenen Yetkili :** ${user}`)
         );
 
     const devralEmbed = new EmbedBuilder()
         .setTitle("Ticket Devralındı")
-        .setDescription(`Ticket Devralındı! ${user} Bu Ticketi İncelemeye Başladı!`)
+        .setDescription(`Ticket ${user} İsimli Yetkili Tarafından İncelenmeye Başlandı!`)
         .setColor("Blue");
   
     const updatedButtons = new ActionRowBuilder().addComponents(
